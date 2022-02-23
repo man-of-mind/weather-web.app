@@ -13,14 +13,16 @@
 
 <body>
     <main>
-        <header class="search">
-            <input type="text" class="search-bar" placeholder="Search ">
-            <button>
+        <header>
+            <div class="search">
+                <input type="text" class="search-bar" placeholder="Search">
+                <button>
                 <i class="fas fa-search"></i>
             </button>
+            </div>
         </header>
-        <div class="card">
-            <div class="weather">
+        <div class="weather-infos">
+            <div class="card">
                 <h2 class="city">Weather in Lagos</h2>
                 <h1 class="temp">
                     <div>51°C</div>
@@ -32,6 +34,24 @@
                 <div class="humidity">Humidity: 60%</div>
                 <div class="wind">Wind Speed: 6.2km/hr</div>
             </div>
+
+            <div class="card">
+                <div class="weather">
+                    <h2 class="city">Weather in Lagos</h2>
+                    <h1 class="temp">
+                        <div>51°C</div>
+                    </h1>
+                    <div class="contain">
+                        <img src="" alt="" class="weather-icon">
+                        <div class="description">Cloudy</div>
+                    </div>
+                    <div class="humidity">Humidity: 60%</div>
+                    <div class="wind">Wind Speed: 6.2km/hr</div>
+                </div>
+            </div>
+        </div>
+        <div id="button-wrap">
+            <div class="button">Clear searches</div>
         </div>
     </main>
 </body>

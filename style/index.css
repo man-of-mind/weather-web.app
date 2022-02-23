@@ -2,11 +2,10 @@
 body {
     padding: 0px;
     margin: 0px;
-    background: #222;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /*    height: 100vh; */
     font-family: 'Cardo', serif;
     background: url('https://images.unsplash.com/photo-1440366382893-137339639fbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMjU3NzE3fHxlbnwwfHx8fA%3D%3D&w=1000&q=80') center;
 }
@@ -20,12 +19,17 @@ body {
     width: 400px;
 }
 
-.search {
-    padding: 1.5em;
-    width: 100%;
+header {
     display: flex;
+    padding-top: 1.5rem;
     align-items: center;
     justify-content: center;
+}
+
+.search {
+    padding: 1.5em;
+    width: 75%;
+    display: flex;
 }
 
 input {
@@ -50,7 +54,7 @@ button {
     border-radius: 50%;
     border: none;
     padding: 0 15px 0 15px;
-    margin: 15px;
+    margin: 0 15px;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
@@ -70,4 +74,39 @@ h1.temp {
 .contain {
     display: flex;
     align-items: center;
+}
+
+.weather-infos {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-wrap {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin: 1em;
+}
+
+.button {
+    background-color: rgb(235, 82, 55);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 8px 24px;
+    transition: 0.4s;
+    cursor: pointer;
+    width: fit-content;
+    font-size: 16px;
+    font-family: inherit;
+    text-align: center;
+}
+
+.button:hover {
+    opacity: 0.8;
 }
