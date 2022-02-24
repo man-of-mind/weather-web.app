@@ -1,11 +1,17 @@
 const api_key = 'bb92bfa8ce1d036519e7acaa111b6d76';
 const request_button = document.querySelector('.search button');
 const weather_info = document.querySelector('.weather-infos');
+var previous_searches = [];
 
 request_button.addEventListener('click', () => {
     const query = document.querySelector('.search-bar').value;
     if (query != '') {
-        fetchWeatherInfo(query);
+        query.toLowerCase();
+        if (previous_searches.includes(query)) {
+            alert(query + "'s weather information is already been displayed");
+        } else {
+            fetchWeatherInfo(query);
+        }
     } else {
         alert('Please enter a valid city name!!!');
     }
@@ -35,6 +41,8 @@ function collate_result(data) {
             name: data.name
         }
         create_cards(ans);
+        var city_name = data.name.toLowerCase();
+        previous_searches.push(city_name);
     } else {
         alert("City not found");
         return;
@@ -80,7 +88,12 @@ document.querySelector('.search-bar').addEventListener('keyup', function(event) 
     if (event.key == "Enter") {
         const query = document.querySelector('.search-bar').value;
         if (query != '') {
-            fetchWeatherInfo(query);
+            query.toLowerCase();
+            if (previous_searches.includes(query)) {
+                alert(query + "'s weather information is already been displayed");
+            } else {
+                fetchWeatherInfo(query);
+            }
         } else {
             alert('Please enter a valid city name!!!');
         }
