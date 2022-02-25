@@ -21,7 +21,7 @@ request_button.addEventListener('click', () => {
 
 function fetchWeatherInfo(city) {
     fetch(
-        'http://api.openweathermap.org/data/2.5/weather?q=' +
+        'https://api.openweathermap.org/data/2.5/weather?q=' +
         city +
         '&units=metric&appid=' +
         api_key
