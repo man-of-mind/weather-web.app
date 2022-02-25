@@ -52,9 +52,16 @@ function collate_result(data) {
 function create_cards(element) {
     const weather = document.createElement('div');
     weather.classList.add('card');
+    const flex_container = document.createElement('div');
+    flex_container.classList.add('wrap');
     const city = document.createElement('h2');
     city.classList.add('city');
     city.innerHTML = 'Weather in ' + element.name;
+    const clear = document.createElement('div');
+    clear.classList.add('clear');
+    clear.innerHTML = 'Clear';
+    flex_container.appendChild(city);
+    flex_container.append(clear);
     const temp = document.createElement('h1');
     temp.classList.add('temp');
     temp.innerHTML = element.temp + '°C';
@@ -74,13 +81,22 @@ function create_cards(element) {
     const wind = document.createElement('div');
     wind.classList.add('wind');
     wind.innerText = "Wind speed: " + element.wind + ' km/hr';
-    weather.appendChild(city);
+    weather.appendChild(flex_container);
     weather.appendChild(temp);
     weather.appendChild(img_contain);
     weather.appendChild(humidity);
     weather.appendChild(wind);
 
     weather_info.appendChild(weather);
+
+    clear.addEventListener("click", () => {
+        var cityName = String(element.name);
+        weather_info.removeChild(weather);
+        var filtered = previous_searches.filter(function(value, index, arr) {
+            return value != cityName.toLowerCase();
+        });
+        previous_searches = filtered;
+    });
 }
 
 

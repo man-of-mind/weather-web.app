@@ -63,6 +63,21 @@ button:hover {
     background-color: gray;
 }
 
+.wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clear {
+    color: rgb(235, 82, 55);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.clear:hover {
+    opacity: 0.7;
+}
+
 h1.temp {
     margin: 0;
 }
