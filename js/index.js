@@ -118,7 +118,7 @@ document.querySelector('.search-bar').addEventListener('keyup', function(event) 
 });
 
 document.querySelector('.button').addEventListener("click", () => {
-    document.querySelector('.search-bar').value = '';
+    previous_searches = [];
     weather_info.innerHTML = '';
     document.removeChild(weather_info);
 });
