@@ -125,3 +125,36 @@ h1.temp {
 .button:hover {
     opacity: 0.8;
 }
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0px;
+        margin: 0px;
+        display: block;
+        font-family: 'Cardo', serif;
+        background: url('https://images.unsplash.com/photo-1440366382893-137339639fbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMjU3NzE3fHxlbnwwfHx8fA%3D%3D&w=1000&q=80') center;
+    }
+    header {
+        display: flex;
+        padding-top: 1.5rem;
+        align-items: center;
+        justify-content: center;
+    }
+    .search {
+        padding: 1.5em;
+        width: 100%;
+        display: flex;
+    }
+    .weather-infos {
+        display: block;
+        width: 100%;
+    }
+    .card {
+        background-color: #000000d0;
+        color: white;
+        padding: 1.5em;
+        border-radius: 25px;
+        margin: 1em;
+        width: calc(100% - 5em);
+    }
+}
