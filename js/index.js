@@ -92,7 +92,7 @@ function create_cards(element) {
     clear.addEventListener("click", () => {
         var cityName = String(element.name);
         weather_info.removeChild(weather);
-        var filtered = previous_searches.filter(function(value, index, arr) {
+        let filtered = previous_searches.filter(function(value, index, arr) {
             return value != cityName.toLowerCase();
         });
         previous_searches = filtered;
