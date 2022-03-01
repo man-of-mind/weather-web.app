@@ -4,6 +4,11 @@ const weather_info = document.querySelector('.weather-infos');
 var previous_searches = [];
 
 request_button.addEventListener('click', () => {
+    controlEventListener();
+
+});
+
+function controlEventListener() {
     const query = document.querySelector('.search-bar').value;
     if (query != '') {
         query.toLowerCase();
@@ -16,8 +21,7 @@ request_button.addEventListener('click', () => {
         alert('Please enter a valid city name!!!');
     }
     document.querySelector('.search-bar').value = '';
-
-});
+}
 
 function fetchWeatherInfo(city) {
     fetch(
@@ -102,18 +106,7 @@ function create_cards(element) {
 
 document.querySelector('.search-bar').addEventListener('keyup', function(event) {
     if (event.key == "Enter") {
-        const query = document.querySelector('.search-bar').value;
-        if (query != '') {
-            query.toLowerCase();
-            if (previous_searches.includes(query)) {
-                alert(query + "'s weather information is already been displayed");
-            } else {
-                fetchWeatherInfo(query);
-            }
-        } else {
-            alert('Please enter a valid city name!!!');
-        }
-        document.querySelector('.search-bar').value = '';
+        controlEventListener();
     }
 });
 
