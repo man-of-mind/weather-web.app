@@ -1,21 +1,139 @@
-/*
-Errno::ENOENT: No such file or directory @ rb_sysopen - scss/index.scss
+@import "https://fonts.googleapis.com/css2?family=Bangers&family=Cardo&family=Lobster+Two&display=swap";
+body {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Cardo', serif;
+  background: url("https://images.unsplash.com/photo-1440366382893-137339639fbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMjU3NzE3fHxlbnwwfHx8fA%3D%3D&w=1000&q=80") center; }
 
-Backtrace:
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:454:in `read'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:454:in `update_stylesheet'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `each'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/lib/ruby/vendor_ruby/sass/plugin/compiler.rb:294:in `watch'
-/usr/lib/ruby/vendor_ruby/sass/plugin.rb:109:in `method_missing'
-/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:354:in `watch_or_update'
-/usr/lib/ruby/vendor_ruby/sass/exec/sass_scss.rb:51:in `process_result'
-/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:50:in `parse'
-/usr/lib/ruby/vendor_ruby/sass/exec/base.rb:18:in `parse!'
-/usr/bin/sass:8:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory @ rb_sysopen - scss/index.scss"; }
+.card {
+  background-color: #000000d0;
+  color: white;
+  padding: 1.5em;
+  border-radius: 25px;
+  margin: 1em;
+  width: 400px; }
+
+header {
+  display: flex;
+  padding-top: 1.5rem;
+  align-items: center;
+  justify-content: center; }
+
+.search {
+  padding: 1.5em;
+  width: 75%;
+  display: flex; }
+
+input {
+  width: 100%;
+  height: 2.8em;
+  border-radius: 20px;
+  color: white;
+  font-family: inherit;
+  background-color: #353232;
+  border: none;
+  padding: 0 10px 0 10px;
+  font-size: 18px;
+  outline: none; }
+
+button {
+  outline: none;
+  background-color: #353232;
+  color: white;
+  height: 3.5em;
+  width: 3.8em;
+  border-radius: 50%;
+  border: none;
+  padding: 0 15px 0 15px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out; }
+  button:hover {
+    background-color: gray; }
+
+.wrap {
+  display: flex;
+  justify-content: space-between; }
+
+.clear {
+  color: #eb5237;
+  cursor: pointer;
+  transition: 0.4s ease-in-out; }
+  .clear:hover {
+    opacity: 0.7; }
+
+h1.temp {
+  margin: 0; }
+
+.description {
+  text-transform: capitalize; }
+
+.contain {
+  display: flex;
+  align-items: center; }
+
+.weather-infos {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 100%;
+  justify-content: center;
+  align-items: center; }
+
+#button-wrap {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  margin: 1em; }
+
+.button {
+  background-color: #eb5237;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 8px 24px;
+  transition: 0.4s;
+  cursor: pointer;
+  width: fit-content;
+  font-size: 16px;
+  font-family: inherit;
+  text-align: center; }
+  .button:hover {
+    opacity: 0.8; }
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    font-family: 'Cardo', serif;
+    background: url("https://images.unsplash.com/photo-1440366382893-137339639fbd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMjU3NzE3fHxlbnwwfHx8fA%3D%3D&w=1000&q=80") center; }
+
+  header {
+    display: flex;
+    padding-top: 1.5rem;
+    align-items: center;
+    justify-content: center; }
+
+  .search {
+    padding: 1.5em;
+    width: 100%;
+    display: flex; }
+
+  .weather-infos {
+    display: block;
+    width: 100%; }
+
+  .card {
+    background-color: #000000d0;
+    color: white;
+    padding: 1.5em;
+    border-radius: 25px;
+    margin: 1em;
+    width: calc(100% - 5em); } }
+
+/*# sourceMappingURL=index.css.map */
